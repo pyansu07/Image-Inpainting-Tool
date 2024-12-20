@@ -7,10 +7,10 @@ from pymongo import MongoClient
 
 app = FastAPI()
 
-# Allow CORS for your React app
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Adjust this to your React app's URL
+    allow_origins=["https://image-inpainting-tool-1.onrender.com/"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -28,7 +28,7 @@ async def upload_image(file: UploadFile = File(...)):
     with open(file_location, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
     
-    # Save metadata to MongoDB
+  
     images_collection.insert_one({"filename": file.filename})
     
     return {"filename": file.filename}
