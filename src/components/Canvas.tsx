@@ -171,6 +171,9 @@ export const Canvas: React.FC<CanvasProps> = ({ onMaskGenerated }) => {
       <div className="border border-gray-300 rounded-lg overflow-hidden shadow-lg">
         <canvas ref={canvasRef} className="w-full h-96" />
       </div>
+            <div className="mt-4 text-gray-600 text-center">
+        <p>After uploading the image, please wait a moment for processing.</p>
+      </div>
     </div>
   );
 };
