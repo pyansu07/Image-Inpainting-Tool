@@ -2,6 +2,8 @@
 
 This project is an Image Inpainting Tool built with React for the frontend and FastAPI for the backend. It allows users to upload images and generate masks for inpainting.
 
+## Live - https://image-inpainting-tool-1.onrender.com
+
 ## Table of Contents
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
